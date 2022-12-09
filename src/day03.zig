@@ -10,10 +10,8 @@ pub fn main() !void {
 
     var groupSets: [3]Set = undefined;
     var groupIndex: usize = 0;
-    var iterator = std.mem.split(u8, data, "\n");
+    var iterator = std.mem.tokenize(u8, data, "\n");
     while (iterator.next()) |line| {
-        if (line.len == 0) continue;
-
         var set = Set.initEmpty();
         var groupSet = Set.initEmpty();
 

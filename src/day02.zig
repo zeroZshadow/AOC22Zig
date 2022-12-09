@@ -40,12 +40,10 @@ const RoundChoice = enum {
 };
 
 pub fn main() !void {
-    var iterator = std.mem.split(u8, data, "\n");
+    var iterator = std.mem.tokenize(u8, data, "\n");
     var totalScoreA: u32 = 0;
     var totalScoreB: u32 = 0;
     while (iterator.next()) |line| {
-        if (line.len == 0) continue;
-
         const opponentPick = RockPaperScissors.fromCharacter(line[0]);
         const myPick = RockPaperScissors.fromCharacter(line[2]);
         const goal = RoundChoice.fromCharacter(line[2]);
