@@ -40,9 +40,6 @@ const RoundChoice = enum {
 };
 
 pub fn main() !void {
-    //var list = std.ArrayList(u32).init(gpa.allocator());
-    //defer list.deinit();
-
     var iterator = std.mem.split(u8, data, "\n");
     var totalScoreA: u32 = 0;
     var totalScoreB: u32 = 0;
