@@ -72,7 +72,7 @@ pub fn main() !void {
     std.log.info("Total score: {}", .{totalScoreA});
 
     // Part 2
-    std.debug.assert(totalScoreA == 14060);
+    std.debug.assert(totalScoreB == 14060);
     std.log.info("Target score: {}", .{totalScoreB});
 }
 
