@@ -4,6 +4,7 @@ var gpa = std.heap.GeneralPurposeAllocator(.{}){};
 const data = @embedFile("../data/day01.txt");
 
 pub fn main() !void {
+    defer _ = gpa.deinit();
     var list = std.ArrayList(u32).init(gpa.allocator());
     defer list.deinit();
 

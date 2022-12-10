@@ -1,5 +1,4 @@
 const std = @import("std");
-var gpa = std.heap.GeneralPurposeAllocator(.{}){};
 
 const data = @embedFile("../data/day03.txt");
 const Set = std.bit_set.StaticBitSet(52);
